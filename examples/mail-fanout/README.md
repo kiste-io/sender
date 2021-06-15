@@ -44,9 +44,10 @@ Prometheus in this setup is running in docker. In oder to be able to scrap your 
   - job_name: 'app_mail'
     ...
     - targets: ['<intranet_ip>:8080']
-```
+````
 
 
+You can check prometheus metrics on `http://localhost:9090`
 
 
 
