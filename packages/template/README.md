@@ -12,6 +12,6 @@ const html = templater(templateName, payload).compile()
 ```
 
 
-## Implemented Template Engings
+## Implemented template engines
 
 - [handlebars](http://handlebarsjs.com/)
