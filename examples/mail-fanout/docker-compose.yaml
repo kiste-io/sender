@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+    mta:
+        image: boky/postfix
+        environment:
+            ALLOWED_SENDER_DOMAINS: "example.com"
+        ports:
+            - "1587:587"
+
+    monitoring:
+        image: prom/prometheus
+        ports: 
+            - "9090:9090"
+        volumes: 
+            - ./prometheus.yml:/etc/prometheus/prometheus.yml
+        
+

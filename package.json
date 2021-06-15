@@ -1,0 +1,10 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap --hoist=express --hoist=dotenv"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}

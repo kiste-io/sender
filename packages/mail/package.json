@@ -1,0 +1,30 @@
+{
+  "name": "@kiste/sender-mail",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "zavalit <zavalit@gmail.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "src/index.js",
+  "directories": {
+    "test": "__tests__"
+  },
+  "files": [
+    "src",
+    "prometheus"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "@kiste/sender-template": "^0.0.0",
+    "nodemailer": "^6.6.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "peerDependencies": {
+    "dotenv": "^10.0.0",
+    "prom-client": "^13.1.0"
+  }
+}
