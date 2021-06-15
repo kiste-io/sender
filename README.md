@@ -1,4 +1,4 @@
-# sender
+# Sender
 node.js packages for sending mails like a charm
 
 
