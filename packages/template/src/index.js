@@ -57,7 +57,7 @@ const compileHandelsbars = (templateContent, payload) => new Promise((resolve, r
 
 module.exports = (templateName, payload) => {
 
-    const tpl = templates.find(t => t.templateName === templateName) 
+    const tpl = templates.find(t => t.templateName === templateName) || {}
     
     return {
         compile:  () =>  {
