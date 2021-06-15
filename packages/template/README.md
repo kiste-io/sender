@@ -1,6 +1,5 @@
 # `@kiste/sender-template`
 
-> TODO: description
 
 ## Usage
 
@@ -11,3 +10,8 @@ const templater = require('@kiste/sender-template');
 
 const html = templater(templateName, payload).compile()
 ```
+
+
+## Implemented Template Engings
+
+- [handlebars](http://handlebarsjs.com/)
