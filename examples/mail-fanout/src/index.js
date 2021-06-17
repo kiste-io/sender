@@ -31,8 +31,7 @@ app.use('/mail/send', (req, res) => {
         mailMonitoring.success(result)
     })
     .catch(e => {
-        console.error(e)
-        
+        console.error(e)        
         res.status(e.status || 500).send()
         mailMonitoring.failure()
     })
