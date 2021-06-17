@@ -31,13 +31,5 @@ jobs:
           docker build . --file Dockerfile --tag kisteio/mail-fanout
 
       - name: Push image
-        run: |
-          IMAGE_ID=kisteio/mail-fanout
-
-          VERSION=$(cat service1/VERSION)
-
-          echo IMAGE_ID=$IMAGE_ID
-          echo VERSION=$VERSION
-
-          docker tag image $IMAGE_ID:$VERSION
-          docker push $IMAGE_ID:$VERSION
+        run: |          
+          docker push kisteio/mail-fanout
