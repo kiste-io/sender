@@ -1,10 +1,13 @@
 const fs = require('fs')
 const {
-    EMAIL_TEMPLATES_DIR_PATH
+    EMAIL_TEMPLATES_DIR_PATH,
+    EMAIL_IMAGES_HOST,
+    EMAIL_IMAGES_URL_PATH
 } = require('./config')
 
 
 
+const imgHostPath = `${EMAIL_IMAGES_HOST}/${EMAIL_IMAGES_URL_PATH}`
 
 const templateFileNameRegEx = new RegExp(/^(\w+)\.(\w+)/)
 
@@ -58,13 +61,15 @@ const compileHandelsbars = (templateContent, payload) => new Promise((resolve, r
 module.exports = (templateName, payload) => {
 
     const tpl = templates.find(t => t.templateName === templateName) || {}
+
+    const templatePayload = {...payload, img_host_path: imgHostPath}
     
     return {
         compile:  () =>  {
 
             switch (tpl.templateEngine) {
                 case HANDELBARS_MODULE:
-                    return compileHandelsbars(tpl.templateContent, payload)
+                    return compileHandelsbars(tpl.templateContent, templatePayload)
 
                 default:
                     return Promise.resolve('no template engine')

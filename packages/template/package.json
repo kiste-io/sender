@@ -10,7 +10,8 @@
     "test": "__tests__"
   },
   "files": [
-    "src"
+    "src",
+    "express"
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"

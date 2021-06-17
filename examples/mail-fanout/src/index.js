@@ -10,13 +10,18 @@ const {APP_PORT} = require('./config')
 const nodeJsMonitoring = require('./prometheus')
 
 const auth = require('@kiste/sender-simple-auth/express')
+const template = require('@kiste/sender-template/express')
 
 var app = express()
 app.use(express.json());
 
 app.use('/', nodeJsMonitoring.expressRouter)
+app.use('/', template.router)
 app.use('/mail', mailMonitoring.expressRouter)
 app.use('/auth', auth.router)
+
+
+
 app.use(auth.verifyAuthTokenMiddleware)
 
 
