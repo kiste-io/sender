@@ -35,7 +35,6 @@ app.use('/mail/send', (req, res) => {
         res.status(e.status || 500).send()
         mailMonitoring.failure()
     })
-
 })
 
 app.listen(APP_PORT, () => console.log(`mail-fanout is running on local port ${APP_PORT}`))
