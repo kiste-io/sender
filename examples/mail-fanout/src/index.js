@@ -18,14 +18,8 @@ app.use(express.json());
 app.use('', template.router)
 app.use('/', nodeJsMonitoring.expressRouter)
 app.use('/mail', mailMonitoring.expressRouter)
-
 app.use('/auth', auth.router)
-
-
-
 app.use(auth.verifyAuthTokenMiddleware)
-
-
 app.use('/mail/send', (req, res) => {
 
     mailSender(req.body, [
