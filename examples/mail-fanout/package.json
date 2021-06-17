@@ -1,6 +1,6 @@
 {
   "name": "@kiste/mail-fanout-example",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "description": "> TODO: description",
   "author": "zavalit <zavalit@gmail.com>",
@@ -19,9 +19,9 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@kiste/sender-mail": "^0.0.1",
-    "@kiste/sender-simple-auth": "^0.0.1",
-    "@kiste/sender-template": "^0.0.1",
+    "@kiste/sender-mail": "^0.0.2",
+    "@kiste/sender-simple-auth": "^0.0.2",
+    "@kiste/sender-template": "^0.0.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "prom-client": "^13.1.0"
