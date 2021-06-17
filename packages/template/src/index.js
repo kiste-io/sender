@@ -7,7 +7,7 @@ const {
 
 
 
-const imgHostPath = `${EMAIL_MEDIA_HOST}${EMAIL_MEDIA_URL_PATH}`
+const mediaHostPath = `${EMAIL_MEDIA_HOST}${EMAIL_MEDIA_URL_PATH}`
 
 const templateFileNameRegEx = new RegExp(/^(\w+)\.(\w+)/)
 
@@ -62,7 +62,7 @@ module.exports = (templateName, payload) => {
 
     const tpl = templates.find(t => t.templateName === templateName) || {}
 
-    const templatePayload = {...payload, img_host_path: imgHostPath}
+    const templatePayload = {...payload, media_host_path: mediaHostPath}
     
     return {
         compile:  () =>  {
