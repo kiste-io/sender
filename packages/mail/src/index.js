@@ -11,7 +11,21 @@ const {
     SEND_OBTAINED_EMAIL_TARGET_SUBJECT,
 } = require('./config')
 const templater = require('@kiste/sender-template')
+const validation = require('./validation')
 
+
+
+const varifyPayload = (templateName, payload) => new Promise((resolve, reject) => {
+
+    if(validation.notExists(templateName)) {
+        resolve()
+        return
+    }
+
+    validation.isValid(templateName, payload) 
+    ? resolve() 
+    : reject({message: `${templateName} have got an incorrect payload`, status: 400})
+})
 
 
 const renderHtmlTemplate = (templateName, payload) => 
@@ -22,7 +36,8 @@ const mailSender = (payload, sinks) =>
     Promise.all(
         sinks.map(
             ([sink, templateName]) => 
-                renderHtmlTemplate(templateName, payload)
+                varifyPayload(templateName, payload)
+                .then(() => renderHtmlTemplate(templateName, payload))
                 .then( html => sink(payload, {html}))))
     .then((r) => [payload, r]);
 

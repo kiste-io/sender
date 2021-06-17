@@ -18,12 +18,12 @@
   },
   "dependencies": {
     "@kiste/sender-template": "^0.0.1",
+    "jsonschema": "^1.4.0",
     "nodemailer": "^6.6.1",
     "prom-client": "^13.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-
   },
   "peerDependencies": {
     "dotenv": "^10.0.0"

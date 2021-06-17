@@ -32,6 +32,13 @@ curl --location --request POST 'localhost:8080/mail/send' \
 
 ```
 
+
+### Schema validation
+
+put your json schema to the folder and point to them by  `.env` variable  `PAYLOAD_SCHEMAS_DIR_PATH`, by default it will look in your `<project_root>/schemas` directory. 
+The name of json schema file, should be equal to template name key. For example for template name `list.handlebars.html` json schema file have to be named as `list.json`
+
+
 ### Prometheus
 
 Prometheus in this setup is running in docker. In oder to be able to scrap your node.js running on a host, please provide an intranet ip of your host.
