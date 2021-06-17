@@ -15,9 +15,10 @@ const template = require('@kiste/sender-template/express')
 var app = express()
 app.use(express.json());
 
+app.use('', template.router)
 app.use('/', nodeJsMonitoring.expressRouter)
-app.use('/', template.router)
 app.use('/mail', mailMonitoring.expressRouter)
+
 app.use('/auth', auth.router)
 
 
