@@ -45,4 +45,4 @@ app.use('/mail/send', (req, res) => {
 
 })
 
-app.listen(APP_PORT)
+app.listen(APP_PORT, () => console.log(`mail-fanout is running on local port ${APP_PORT}`))
