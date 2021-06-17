@@ -1,13 +1,13 @@
 const fs = require('fs')
 const {
     EMAIL_TEMPLATES_DIR_PATH,
-    EMAIL_IMAGES_HOST,
-    EMAIL_IMAGES_URL_PATH
+    EMAIL_MEDIA_HOST,
+    EMAIL_MEDIA_URL_PATH
 } = require('./config')
 
 
 
-const imgHostPath = `${EMAIL_IMAGES_HOST}/${EMAIL_IMAGES_URL_PATH}`
+const imgHostPath = `${EMAIL_MEDIA_HOST}${EMAIL_MEDIA_URL_PATH}`
 
 const templateFileNameRegEx = new RegExp(/^(\w+)\.(\w+)/)
 
