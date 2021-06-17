@@ -13,7 +13,6 @@ register.setDefaultLabels({
 // Enable the collection of default metrics
 client.collectDefaultMetrics({ register })
 
-
 expressRouter.get('/metrics', async (_, res) => {
     res.set('Content-Type', register.contentType)
     const metrics = await register.metrics()
@@ -21,6 +20,5 @@ expressRouter.get('/metrics', async (_, res) => {
 })
 
 module.exports = {
-    
     expressRouter
 }

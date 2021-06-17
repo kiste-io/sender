@@ -28,7 +28,7 @@ jobs:
       - name: Build image
         run: |
           ls -la
-          
+          docker build . --file Dockerfile --tag kisteio/mail-fanout
 
       - name: Push image
         run: |
