@@ -1,7 +1,14 @@
-name: Build and publish
+name: Build and publish mail-fanout app
 
 on:
   push:
+    paths:
+      - "examples/mail-fanout/**"
+
+defaults:
+  run:
+    shell: bash
+    working-directory: examples/mail-fanout
 
 jobs:
   build-and-publish:
