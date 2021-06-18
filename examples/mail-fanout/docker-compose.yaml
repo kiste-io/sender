@@ -3,6 +3,8 @@ version: '3'
 services:
     mta:
         image: boky/postfix
+        ports: 
+            - "587:587"
         environment:
             ALLOWED_SENDER_DOMAINS: "example.com"
      
@@ -19,11 +21,18 @@ services:
         ports: 
             - "8080:8080"
         env_file:
-            - ".env.production"
+            - ".env"
         volumes: 
             - ./data:/data
 
-        
+    app_production:
+        image: kisteio/mail-fanout:latest
+        ports: 
+            - "8080:8080"
+        env_file:
+            - ".env.production"
+        volumes: 
+            - ./data:/data
 
             
 

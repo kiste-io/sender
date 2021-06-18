@@ -22,6 +22,7 @@
     "@kiste/sender-mail": "^0.0.2",
     "@kiste/sender-simple-auth": "^0.0.2",
     "@kiste/sender-template": "^0.0.2",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "prom-client": "^13.1.0"

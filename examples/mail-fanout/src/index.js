@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('./cors')
 const { 
     mailSender, 
     sendToPredefinedAddress, 
@@ -12,9 +13,11 @@ const nodeJsMonitoring = require('./prometheus')
 const auth = require('@kiste/sender-simple-auth/express')
 const template = require('@kiste/sender-template/express')
 
-var app = express()
-app.use(express.json());
 
+
+var app = express()
+app.use(express.json())
+app.use(cors.middelware())
 app.use('', template.router)
 app.use('/', nodeJsMonitoring.expressRouter)
 app.use('/mail', mailMonitoring.expressRouter)
