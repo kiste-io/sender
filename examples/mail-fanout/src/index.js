@@ -7,7 +7,7 @@ const {
 } = require('@kiste/sender-mail')
 
 const mailMonitoring = require('@kiste/sender-mail/prometheus')
-const {APP_PORT} = require('./config')
+const {APP_PORT, DEBUG} = require('./config')
 const nodeJsMonitoring = require('./prometheus')
 
 const auth = require('@kiste/sender-simple-auth/express')
@@ -30,7 +30,7 @@ app.use('/mail/send', (req, res) => {
         [sendToObtainedAddress, 'message']
     ])
     .then(([_, result]) => {
-        res.send(result)
+        res.send(DEBUG && result || '')
         mailMonitoring.success(result)
     })
     .catch(e => {
