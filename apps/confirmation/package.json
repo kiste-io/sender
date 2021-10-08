@@ -1,0 +1,21 @@
+{
+  "name": "@kiste/sender-confirmation",
+  "version": "0.0.1",
+  "description": "Confirmations mails",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@kiste/backend-mongo-connector": "^0.0.12",
+    "@kiste/sender-mail": "^0.0.2",
+    "@kiste/sender-simple-auth": "^0.0.2",
+    "@kiste/sender-template": "^0.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "prom-client": "^13.1.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

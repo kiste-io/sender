@@ -1,13 +1,13 @@
-name: Build and publish mail-fanout app
+name: Build and publish confirmation app
 
 on:
   push:
     paths:
-      - "apps/mail-fanout/**"
+      - "apps/confirmation/**"
 
 defaults:
   run:
-    working-directory: apps/mail-fanout
+    working-directory: apps/confirmation
 
 
 jobs:
@@ -15,11 +15,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      -
-        name: Set up QEMU
+      - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
-      -
-        name: Login to DockerHub
+      - name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
           username: kisteio
@@ -28,8 +26,8 @@ jobs:
       - name: Build image
         run: |
           ls -la
-          docker build . --file Dockerfile --tag kisteio/mail-fanout
+          docker build . --file Dockerfile --tag kisteio/confirmation
 
       - name: Push image
         run: |          
-          docker push kisteio/mail-fanout
+          docker push kisteio/confirmation
