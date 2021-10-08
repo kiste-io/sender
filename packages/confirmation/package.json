@@ -1,0 +1,34 @@
+{
+  "name": "@kiste/sender-confirmation",
+  "version": "0.0.1",
+  "description": "Virification confirmation token",
+  "author": "zavalit <zavalit@gmail.com>",
+  "homepage": "https://github.com/kiste-io/sender#readme",
+  "license": "MIT",
+  "main": "src/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "express",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiste-io/sender.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/kiste-io/sender/issues"
+  },
+  "dependencies": {
+    "@kiste/backend-mongo-connector": "^0.0.12",
+    "uuid": "^8.3.2"
+  }
+}

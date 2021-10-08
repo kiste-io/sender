@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/user.schema.json",
+    "title": "Confirmation",
+    "description": "Confirmation payload",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "user name",
+            "type": "string"
+        },
+        "email": {
+            "description": "Email of the user",
+            "type": "string"
+        },
+        "uri": {
+            "description": "Confirmation Uri",
+            "type": "string",
+            "format": "uri"
+        }
+    },
+    "required": ["name", "email", "uri"]
+}

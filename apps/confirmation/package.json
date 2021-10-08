@@ -4,10 +4,9 @@
   "description": "Confirmations mails",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
   "dependencies": {
-    "@kiste/backend-mongo-connector": "^0.0.12",
     "@kiste/sender-mail": "^0.0.2",
     "@kiste/sender-simple-auth": "^0.0.2",
     "@kiste/sender-template": "^0.0.2",
